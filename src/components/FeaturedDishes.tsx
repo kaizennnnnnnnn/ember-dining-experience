@@ -7,20 +7,20 @@ import dishTuna from "@/assets/dish-tuna.jpg";
 import dishDuck from "@/assets/dish-duck.jpg";
 
 const dishes = [
-  { img: dishScallops, name: "Seared Scallops", desc: "With saffron risotto and citrus beurre blanc", price: "€32", badge: "Chef's Choice" },
-  { img: dishWagyu, name: "Wagyu Tenderloin", desc: "Red wine reduction, truffle shavings, roasted garlic", price: "€58", badge: "Most Popular" },
-  { img: dishLobster, name: "Butter-Poached Lobster", desc: "Herb butter sauce, seasonal vegetables", price: "€45", badge: null },
-  { img: dishDuck, name: "Duck Breast", desc: "Cherry reduction, fondant potato, wilted greens", price: "€36", badge: null },
-  { img: dishTuna, name: "Tuna Tartare", desc: "Avocado, sesame, ponzu, microgreens", price: "€24", badge: "Chef's Choice" },
-  { img: dishChocolate, name: "Chocolate Sphere", desc: "Gold leaf, salted caramel, vanilla crème", price: "€18", badge: null },
+  { img: dishScallops, name: "Pržene Kapice", desc: "Sa šafranskim risotom i citrusnim beurre blanc", price: "€32", badge: "Kuvarov Izbor" },
+  { img: dishWagyu, name: "Wagyu File", desc: "Redukcija crvenog vina, strugotine tartufa, pečeni beli luk", price: "€58", badge: "Najpopularnije" },
+  { img: dishLobster, name: "Jastog Kuvani u Puteru", desc: "Umak od začinskog putera, sezonsko povrće", price: "€45", badge: null },
+  { img: dishDuck, name: "Pačja Prsa", desc: "Redukcija trešnje, fondant krompir, uvelo zelje", price: "€36", badge: null },
+  { img: dishTuna, name: "Tuna Tartare", desc: "Avokado, susam, ponzu, mikrozelje", price: "€24", badge: "Kuvarov Izbor" },
+  { img: dishChocolate, name: "Čokoladna Sfera", desc: "Zlatni listić, slani karamel, krem od vanile", price: "€18", badge: null },
 ];
 
 const FeaturedDishes = () => (
   <section className="section-padding bg-muted/30">
     <div className="section-container">
       <ScrollReveal className="text-center mb-16">
-        <span className="badge-label mb-4 block">Signature Dishes</span>
-        <h2 className="text-4xl md:text-5xl font-light text-foreground">Crafted with Passion</h2>
+        <span className="badge-label mb-4 block">Zaštitna Jela</span>
+        <h2 className="text-4xl md:text-5xl font-light text-foreground">Pravljena sa Strašću</h2>
       </ScrollReveal>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

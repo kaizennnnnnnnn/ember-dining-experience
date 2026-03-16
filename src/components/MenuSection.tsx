@@ -2,55 +2,55 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "./ScrollReveal";
 
-const categories = ["Starters", "Main Courses", "Desserts", "Drinks"] as const;
+const categories = ["Predjela", "Glavna Jela", "Deserti", "Pića"] as const;
 
 type MenuItem = { name: string; desc: string; price: string; badge?: string };
 
 const menuData: Record<string, MenuItem[]> = {
-  Starters: [
-    { name: "Tuna Tartare", desc: "Fresh yellowfin tuna, avocado, sesame, ponzu dressing", price: "€24" },
-    { name: "Burrata Caprese", desc: "Heirloom tomatoes, basil oil, aged balsamic", price: "€18", badge: "vegetarian" },
-    { name: "Foie Gras Terrine", desc: "Fig compote, brioche toast, Sauternes jelly", price: "€28" },
-    { name: "Lobster Bisque", desc: "Cognac cream, chive oil, gruyère crouton", price: "€22", badge: "chef recommendation" },
-    { name: "Beef Carpaccio", desc: "Truffle aioli, rocket, parmesan shavings", price: "€21" },
+  Predjela: [
+    { name: "Tuna Tartare", desc: "Sveža žutoperajna tuna, avokado, susam, ponzu dresing", price: "€24" },
+    { name: "Burrata Caprese", desc: "Nasleđeni paradajz, ulje bosiljka, odležao balzamik", price: "€18", badge: "vegetarijansko" },
+    { name: "Foie Gras Terrine", desc: "Kompot od smokve, brioche tost, Sauternes žele", price: "€28" },
+    { name: "Lobster Bisque", desc: "Krem od konjaka, ulje vlasca, gruyère kruto", price: "€22", badge: "preporuka kuvara" },
+    { name: "Beef Carpaccio", desc: "Tartufirani ajoli, rukola, strugotine parmezana", price: "€21" },
   ],
-  "Main Courses": [
-    { name: "Wagyu Tenderloin", desc: "Red wine reduction, truffle shavings, roasted garlic mash", price: "€58", badge: "chef recommendation" },
-    { name: "Seared Scallops", desc: "Saffron risotto, citrus beurre blanc, micro herbs", price: "€32" },
-    { name: "Butter-Poached Lobster", desc: "Herb butter, seasonal vegetables, pommes purée", price: "€45" },
-    { name: "Duck Breast", desc: "Cherry reduction, fondant potato, wilted greens", price: "€36" },
-    { name: "Wild Sea Bass", desc: "Fennel purée, olive tapenade, cherry tomatoes", price: "€34" },
-    { name: "Truffle Risotto", desc: "Black truffle, aged parmesan, wild mushrooms", price: "€28", badge: "vegetarian" },
+  "Glavna Jela": [
+    { name: "Wagyu File", desc: "Redukcija crvenog vina, strugotine tartufa, pire od pečenog belog luka", price: "€58", badge: "preporuka kuvara" },
+    { name: "Pržene Kapice", desc: "Šafransko rizo, citrusni beurre blanc, mikro začini", price: "€32" },
+    { name: "Jastog Kuvani u Puteru", desc: "Začinski puter, sezonsko povrće, pommes purée", price: "€45" },
+    { name: "Pačja Prsa", desc: "Redukcija trešnje, fondant krompir, uvelo zelje", price: "€36" },
+    { name: "Divlji Brancin", desc: "Pire od komorača, maslinova tapenade, cherry paradajz", price: "€34" },
+    { name: "Rizo s Tartufom", desc: "Crni tartuf, odležan parmezan, divlje pečurke", price: "€28", badge: "vegetarijansko" },
   ],
-  Desserts: [
-    { name: "Chocolate Sphere", desc: "Gold leaf, salted caramel centre, vanilla crème", price: "€18", badge: "chef recommendation" },
-    { name: "Crème Brûlée", desc: "Madagascar vanilla, caramelized sugar crust", price: "€14" },
-    { name: "Tiramisu", desc: "Espresso-soaked savoiardi, mascarpone, cocoa", price: "€15" },
-    { name: "Panna Cotta", desc: "Strawberry coulis, fresh berries, mint", price: "€13", badge: "vegetarian" },
+  Deserti: [
+    { name: "Čokoladna Sfera", desc: "Zlatni listić, središte od slanog karamela, krem od vanile", price: "€18", badge: "preporuka kuvara" },
+    { name: "Crème Brûlée", desc: "Madagaskarska vanila, kora od karamelizovanog šećera", price: "€14" },
+    { name: "Tiramisu", desc: "Savoiardi natopljeni espressom, mascarpone, kakao", price: "€15" },
+    { name: "Panna Cotta", desc: "Kulis od jagoda, sveže bobice, menta", price: "€13", badge: "vegetarijansko" },
   ],
-  Drinks: [
-    { name: "Ember Old Fashioned", desc: "Smoked bourbon, demerara, Angostura, orange peel", price: "€16" },
-    { name: "French 75", desc: "Gin, champagne, lemon, sugar", price: "€18" },
-    { name: "Sommelier's Wine Pairing", desc: "Five-course curated selection", price: "€65" },
-    { name: "Espresso Martini", desc: "Vodka, fresh espresso, coffee liqueur, vanilla", price: "€15" },
+  Pića: [
+    { name: "Ember Old Fashioned", desc: "Dimljeni burbon, demerara, Angostura, kora narandže", price: "€16" },
+    { name: "French 75", desc: "Džin, šampanjac, limun, šećer", price: "€18" },
+    { name: "Somelijerov Izbor Vina", desc: "Kurirana selekcija od pet jela", price: "€65" },
+    { name: "Espresso Martini", desc: "Votka, svež espresso, liker od kafe, vanila", price: "€15" },
   ],
 };
 
 const badgeColors: Record<string, string> = {
-  vegetarian: "bg-green-900/50 text-green-300",
+  vegetarijansko: "bg-green-900/50 text-green-300",
   spicy: "bg-red-900/50 text-red-300",
-  "chef recommendation": "bg-primary/20 text-primary",
+  "preporuka kuvara": "bg-primary/20 text-primary",
 };
 
 const MenuSection = () => {
-  const [active, setActive] = useState<string>("Starters");
+  const [active, setActive] = useState<string>("Predjela");
 
   return (
     <section id="menu" className="section-padding">
       <div className="section-container">
         <ScrollReveal className="text-center mb-12">
-          <span className="badge-label mb-4 block">Our Menu</span>
-          <h2 className="text-4xl md:text-5xl font-light text-foreground">Explore The Menu</h2>
+          <span className="badge-label mb-4 block">Naš Meni</span>
+          <h2 className="text-4xl md:text-5xl font-light text-foreground">Istražite Meni</h2>
         </ScrollReveal>
 
         {/* Tabs */}
@@ -109,7 +109,7 @@ const MenuSection = () => {
         </div>
 
         <ScrollReveal className="text-center mt-12">
-          <button className="btn-outline">Download Full Menu</button>
+          <button className="btn-outline">Preuzmite Kompletan Meni</button>
         </ScrollReveal>
       </div>
     </section>

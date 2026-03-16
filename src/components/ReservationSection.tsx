@@ -9,12 +9,12 @@ const ReservationSection = () => {
 
   const validate = (form: FormData) => {
     const errs: Record<string, string> = {};
-    if (!form.get("name")) errs.name = "Name is required";
-    if (!form.get("email") || !/\S+@\S+\.\S+/.test(form.get("email") as string)) errs.email = "Valid email required";
-    if (!form.get("phone")) errs.phone = "Phone is required";
-    if (!form.get("date")) errs.date = "Date is required";
-    if (!form.get("time")) errs.time = "Time is required";
-    if (!form.get("guests")) errs.guests = "Number of guests required";
+    if (!form.get("name")) errs.name = "Ime je obavezno";
+    if (!form.get("email") || !/\S+@\S+\.\S+/.test(form.get("email") as string)) errs.email = "Potrebna validna email adresa";
+    if (!form.get("phone")) errs.phone = "Telefon je obavezan";
+    if (!form.get("date")) errs.date = "Datum je obavezan";
+    if (!form.get("time")) errs.time = "Vreme je obavezno";
+    if (!form.get("guests")) errs.guests = "Broj gostiju je obavezan";
     return errs;
   };
 
@@ -31,12 +31,12 @@ const ReservationSection = () => {
   };
 
   const fields = [
-    { name: "name", label: "Full Name", type: "text", placeholder: "Your name" },
+    { name: "name", label: "Ime i Prezime", type: "text", placeholder: "Vaše ime" },
     { name: "email", label: "Email", type: "email", placeholder: "your@email.com" },
-    { name: "phone", label: "Phone", type: "tel", placeholder: "+381 ..." },
-    { name: "date", label: "Date", type: "date", placeholder: "" },
-    { name: "time", label: "Time", type: "time", placeholder: "" },
-    { name: "guests", label: "Number of Guests", type: "number", placeholder: "2" },
+    { name: "phone", label: "Telefon", type: "tel", placeholder: "+381 ..." },
+    { name: "date", label: "Datum", type: "date", placeholder: "" },
+    { name: "time", label: "Vreme", type: "time", placeholder: "" },
+    { name: "guests", label: "Broj Gostiju", type: "number", placeholder: "2" },
   ];
 
   return (
@@ -45,20 +45,20 @@ const ReservationSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left */}
           <ScrollReveal>
-            <span className="badge-label mb-4 block">Reservations</span>
+            <span className="badge-label mb-4 block">Rezervacije</span>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
-              Reserve Your Table
+              Rezervišite Vaš Sto
             </h2>
             <p className="body-text mb-10">
-              Whether it's an intimate dinner for two or a celebration with friends, we'll make every moment special.
-              Book your table and let us take care of the rest.
+              Bilo da je u pitanju intimna večera za dvoje ili proslava sa prijateljima, svaki trenutak ćemo učiniti posebnim.
+              Rezervišite sto i prepustite nam ostatak.
             </p>
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
                 <Phone className="text-primary" size={20} />
                 <div>
-                  <p className="text-sm text-muted-foreground">Call us</p>
+                  <p className="text-sm text-muted-foreground">Pozovite nas</p>
                   <p className="text-foreground">+381 11 234 5678</p>
                 </div>
               </div>
@@ -72,8 +72,8 @@ const ReservationSection = () => {
               <div className="flex items-center gap-4">
                 <Clock className="text-primary" size={20} />
                 <div>
-                  <p className="text-sm text-muted-foreground">Hours</p>
-                  <p className="text-foreground">Mon–Sun: 12:00 – 23:00</p>
+                  <p className="text-sm text-muted-foreground">Radno vreme</p>
+                  <p className="text-foreground">Pon–Ned: 12:00 – 23:00</p>
                 </div>
               </div>
             </div>
@@ -90,10 +90,10 @@ const ReservationSection = () => {
                   className="card-elevated p-8 md:p-10 text-center flex flex-col items-center justify-center min-h-[400px]"
                 >
                   <CheckCircle className="text-primary mb-4" size={48} />
-                  <h3 className="font-display text-2xl text-foreground mb-2">Thank You!</h3>
-                  <p className="body-text text-center">We'll confirm your reservation shortly.</p>
+                  <h3 className="font-display text-2xl text-foreground mb-2">Hvala Vam!</h3>
+                  <p className="body-text text-center">Potvrdiću vašu rezervaciju uskoro.</p>
                   <button onClick={() => setSubmitted(false)} className="btn-outline mt-6 text-sm">
-                    Make Another Reservation
+                    Napravite Još Jednu Rezervaciju
                   </button>
                 </motion.div>
               ) : (
@@ -130,22 +130,22 @@ const ReservationSection = () => {
 
                   <div>
                     <label htmlFor="requests" className="block text-sm text-muted-foreground mb-1.5 font-body">
-                      Special Requests
+                      Posebni Zahtevi
                     </label>
                     <textarea
                       id="requests"
                       name="requests"
                       rows={3}
-                      placeholder="Allergies, celebrations, seating preferences..."
+                      placeholder="Alergije, proslave, preference sedenja..."
                       className="input-field resize-none"
                     />
                   </div>
 
                   <button type="submit" className="btn-primary w-full text-base py-3.5">
-                    Book Your Table
+                    Rezervišite Sto
                   </button>
                   <p className="text-xs text-muted-foreground text-center">
-                    We'll confirm your reservation within 2 hours.
+                    Potvrdiću vašu rezervaciju u roku od 2 sata.
                   </p>
                 </motion.form>
               )}

@@ -6,22 +6,22 @@ import ScrollReveal from "./ScrollReveal";
 const testimonials = [
   {
     name: "Ana Petrović",
-    text: "The atmosphere is simply magical. From the moment you step in, you feel transported. The food... exquisite. A must-visit for any special occasion.",
+    text: "Atmosfera je jednostavno čarobna. Od trenutka kada uđete, osećate se kao da ste negde daleko. Hrana... izuzetna. Obavezna poseta za svaku posebnu priliku.",
     rating: 5,
   },
   {
     name: "Marko Nikolić",
-    text: "We celebrated our anniversary here and everything was perfect — from the wine pairing to the final dessert. The staff made us feel like royalty.",
+    text: "Proslavljali smo godišnjicu ovde i sve je bilo savršeno — od vina do poslednjeg deserta. Osoblje nas je nateralo da se osećamo kao royalty.",
     rating: 5,
   },
   {
     name: "Elena Jovanović",
-    text: "The Wagyu tenderloin is a revelation. I've dined at fine restaurants across Europe, and Maison Ember holds its own against the very best.",
+    text: "Wagyu file je otkrovenje. Jela sam u finim restoranima širom Evrope, i Maison Ember stoji uz bok najboljima.",
     rating: 5,
   },
   {
     name: "Stefan Đorđević",
-    text: "Impeccable service, stunning interior, and food that tells a story. This is what fine dining should be. We'll be back every month.",
+    text: "Besprekoran servis, zapanjujući enterijer i hrana koja priča priču. Ovako treba da izgleda fine dining. Vraćamo se svaki mesec.",
     rating: 5,
   },
 ];
@@ -36,8 +36,8 @@ const TestimonialsSection = () => {
     <section className="section-padding bg-muted/30">
       <div className="section-container">
         <ScrollReveal className="text-center mb-16">
-          <span className="badge-label mb-4 block">Testimonials</span>
-          <h2 className="text-4xl md:text-5xl font-light text-foreground">What Our Guests Say</h2>
+          <span className="badge-label mb-4 block">Utisci Gostiju</span>
+          <h2 className="text-4xl md:text-5xl font-light text-foreground">Šta Naši Gosti Kažu</h2>
         </ScrollReveal>
 
         {/* Desktop grid */}
@@ -80,10 +80,10 @@ const TestimonialsSection = () => {
             </AnimatePresence>
           </div>
           <div className="flex justify-center gap-4 mt-6">
-            <button onClick={prev} className="p-2 rounded-full bg-muted text-foreground/60 hover:text-foreground transition-colors" aria-label="Previous">
+            <button onClick={prev} className="p-2 rounded-full bg-muted text-foreground/60 hover:text-foreground transition-colors" aria-label="Prethodni">
               <ChevronLeft size={20} />
             </button>
-            <button onClick={next} className="p-2 rounded-full bg-muted text-foreground/60 hover:text-foreground transition-colors" aria-label="Next">
+            <button onClick={next} className="p-2 rounded-full bg-muted text-foreground/60 hover:text-foreground transition-colors" aria-label="Sledeći">
               <ChevronRight size={20} />
             </button>
           </div>

@@ -12,14 +12,14 @@ import dishScallops from "@/assets/dish-scallops.jpg";
 import dishWagyu from "@/assets/dish-wagyu.jpg";
 
 const images = [
-  { src: galleryBar, alt: "Wine bar area", span: "col-span-2 row-span-1" },
-  { src: galleryCocktail, alt: "Signature cocktail", span: "col-span-1 row-span-2" },
-  { src: galleryTable, alt: "Table setting detail", span: "col-span-1 row-span-1" },
-  { src: dishScallops, alt: "Seared scallops", span: "col-span-1 row-span-1" },
-  { src: galleryPrivate, alt: "Private dining room", span: "col-span-1 row-span-1" },
-  { src: galleryServing, alt: "Dish being served", span: "col-span-1 row-span-1" },
-  { src: galleryDessert, alt: "Dessert preparation", span: "col-span-1 row-span-1" },
-  { src: dishWagyu, alt: "Wagyu tenderloin", span: "col-span-1 row-span-1" },
+  { src: galleryBar, alt: "Vinski bar", span: "col-span-2 row-span-1" },
+  { src: galleryCocktail, alt: "Zaštitni koktel", span: "col-span-1 row-span-2" },
+  { src: galleryTable, alt: "Detalj postavljenog stola", span: "col-span-1 row-span-1" },
+  { src: dishScallops, alt: "Pržene kapice", span: "col-span-1 row-span-1" },
+  { src: galleryPrivate, alt: "Privatna trpezarija", span: "col-span-1 row-span-1" },
+  { src: galleryServing, alt: "Jelo koje se servira", span: "col-span-1 row-span-1" },
+  { src: galleryDessert, alt: "Priprema deserta", span: "col-span-1 row-span-1" },
+  { src: dishWagyu, alt: "Wagyu file", span: "col-span-1 row-span-1" },
 ];
 
 const GallerySection = () => {
@@ -29,8 +29,8 @@ const GallerySection = () => {
     <section id="gallery" className="section-padding bg-muted/30">
       <div className="section-container">
         <ScrollReveal className="text-center mb-16">
-          <span className="badge-label mb-4 block">Gallery</span>
-          <h2 className="text-4xl md:text-5xl font-light text-foreground">A Glimpse Inside</h2>
+          <span className="badge-label mb-4 block">Galerija</span>
+          <h2 className="text-4xl md:text-5xl font-light text-foreground">Pogled Iznutra</h2>
         </ScrollReveal>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
@@ -39,7 +39,7 @@ const GallerySection = () => {
               <button
                 onClick={() => setSelected(i)}
                 className="w-full h-full overflow-hidden rounded-xl group relative block"
-                aria-label={`View ${img.alt}`}
+                aria-label={`Pogledajte ${img.alt}`}
               >
                 <img
                   src={img.src}
@@ -70,7 +70,7 @@ const GallerySection = () => {
             <button
               onClick={() => setSelected(null)}
               className="absolute top-6 right-6 text-foreground/60 hover:text-foreground transition-colors"
-              aria-label="Close lightbox"
+              aria-label="Zatvori"
             >
               <X size={28} />
             </button>

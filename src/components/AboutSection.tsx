@@ -3,9 +3,9 @@ import aboutImg from "@/assets/about-chef.jpg";
 import { Leaf, Sparkles, Wine } from "lucide-react";
 
 const highlights = [
-  { icon: Leaf, title: "Fresh Ingredients", desc: "Locally sourced, seasonally inspired" },
-  { icon: Sparkles, title: "Exceptional Service", desc: "Attentive, warm, unforgettable" },
-  { icon: Wine, title: "Elegant Ambience", desc: "Refined atmosphere, every detail" },
+  { icon: Leaf, title: "Sveži Sastojci", desc: "Lokalno nabavljeni, sezonski inspirisani" },
+  { icon: Sparkles, title: "Izuzetan Servis", desc: "Pažljiv, topao, nezaboravan" },
+  { icon: Wine, title: "Elegantna Atmosfera", desc: "Uglađena atmosfera, svaki detalj" },
 ];
 
 const AboutSection = () => (
@@ -17,7 +17,7 @@ const AboutSection = () => (
           <div className="overflow-hidden rounded-2xl">
             <img
               src={aboutImg}
-              alt="Chef preparing a dish at Maison Ember"
+              alt="Kuvar priprema jelo u Maison Ember-u"
               className="w-full h-[400px] lg:h-[560px] object-cover image-frame"
               loading="lazy"
             />
@@ -27,19 +27,19 @@ const AboutSection = () => (
         {/* Text */}
         <div>
           <ScrollReveal>
-            <span className="badge-label mb-4 block">Our Story</span>
+            <span className="badge-label mb-4 block">Naša Priča</span>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
-              A Place Where Flavour Meets Atmosphere
+              Mesto Gde Ukus Sreće Atmosferu
             </h2>
             <p className="body-text mb-6">
-              Nestled in the heart of Belgrade, Maison Ember is more than a restaurant — it's an experience.
-              Our kitchen celebrates the richness of Mediterranean traditions, reimagined with modern technique
-              and an unwavering commitment to the finest ingredients.
+              Smešten u srcu Beograda, Maison Ember je više od restorana — to je doživljaj.
+              Naša kuhinja slavi bogatstvo mediteranskih tradicija, preoblikovanih modernim tehnikama
+              i nepokolebivom posvećenošću najfinijim sastojcima.
             </p>
             <p className="body-text mb-10">
-              Every evening at Maison Ember unfolds like a carefully composed symphony — from the warm glow
-              of candlelight to the final note of dessert. We invite you to slow down, savour, and create
-              memories that linger long after the last course.
+              Svaka večer u Maison Ember-u odvija se poput pažljivo složene simfonije — od toplog sjaja
+              sveća do poslednje note deserta. Pozivamo vas da usporite, uživate i stvorite uspomene
+              koje ostaju dugo posle poslednjeg obroka.
             </p>
           </ScrollReveal>
 

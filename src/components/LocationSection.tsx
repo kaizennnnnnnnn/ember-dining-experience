@@ -2,29 +2,29 @@ import { MapPin, Phone, Mail, Clock, Car, TreePine, Users } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const info = [
-  { icon: MapPin, label: "Address", value: "Kralja Petra 74, 11000 Beograd" },
-  { icon: Phone, label: "Phone", value: "+381 11 234 5678" },
+  { icon: MapPin, label: "Adresa", value: "Kralja Petra 74, 11000 Beograd" },
+  { icon: Phone, label: "Telefon", value: "+381 11 234 5678" },
   { icon: Mail, label: "Email", value: "info@maisonember.com" },
 ];
 
 const hours = [
-  { day: "Monday – Friday", time: "12:00 – 23:00" },
-  { day: "Saturday", time: "11:00 – 00:00" },
-  { day: "Sunday", time: "11:00 – 22:00" },
+  { day: "Ponedeljak – Petak", time: "12:00 – 23:00" },
+  { day: "Subota", time: "11:00 – 00:00" },
+  { day: "Nedelja", time: "11:00 – 22:00" },
 ];
 
 const extras = [
-  { icon: Users, text: "Private events available" },
-  { icon: Car, text: "Parking nearby" },
-  { icon: TreePine, text: "Outdoor seating" },
+  { icon: Users, text: "Dostupni privatni događaji" },
+  { icon: Car, text: "Parking u blizini" },
+  { icon: TreePine, text: "Sedenje napolju" },
 ];
 
 const LocationSection = () => (
   <section id="contact" className="section-padding bg-muted/30">
     <div className="section-container">
       <ScrollReveal className="text-center mb-16">
-        <span className="badge-label mb-4 block">Find Us</span>
-        <h2 className="text-4xl md:text-5xl font-light text-foreground">Location & Contact</h2>
+        <span className="badge-label mb-4 block">Pronađite Nas</span>
+        <h2 className="text-4xl md:text-5xl font-light text-foreground">Lokacija i Kontakt</h2>
       </ScrollReveal>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -34,14 +34,14 @@ const LocationSection = () => (
             <div className="text-center">
               <MapPin className="text-primary mx-auto mb-3" size={36} />
               <p className="text-foreground font-display text-lg mb-2">Kralja Petra 74</p>
-              <p className="text-muted-foreground text-sm mb-4">11000 Beograd, Serbia</p>
+              <p className="text-muted-foreground text-sm mb-4">11000 Beograd, Srbija</p>
               <a
                 href="https://maps.google.com/?q=Kralja+Petra+74+Beograd"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-outline text-xs px-4 py-2"
               >
-                Open in Google Maps
+                Otvorite u Google Maps
               </a>
             </div>
           </div>
@@ -64,7 +64,7 @@ const LocationSection = () => (
           </ScrollReveal>
 
           <ScrollReveal delay={0.1}>
-            <h3 className="font-display text-xl text-foreground mb-4">Opening Hours</h3>
+            <h3 className="font-display text-xl text-foreground mb-4">Radno Vreme</h3>
             <div className="space-y-3 mb-10">
               {hours.map((h) => (
                 <div key={h.day} className="flex justify-between items-center py-2 border-b border-border last:border-0">

@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Menu", href: "#menu" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Reservations", href: "#reservations" },
-  { label: "Contact", href: "#contact" },
+  { label: "Početna", href: "#hero" },
+  { label: "O Nama", href: "#about" },
+  { label: "Meni", href: "#menu" },
+  { label: "Galerija", href: "#gallery" },
+  { label: "Rezervacije", href: "#reservations" },
+  { label: "Kontakt", href: "#contact" },
 ];
 
 const Navigation = () => {
@@ -57,7 +57,7 @@ const Navigation = () => {
             ))}
             <li>
               <button onClick={() => handleClick("#reservations")} className="btn-primary text-xs">
-                Reserve a Table
+                Rezervišite Sto
               </button>
             </li>
           </ul>
@@ -66,7 +66,7 @@ const Navigation = () => {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-foreground p-2"
-            aria-label="Toggle menu"
+            aria-label="Otvori/zatvori meni"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -109,7 +109,7 @@ const Navigation = () => {
                 transition={{ duration: 0.3 }}
               >
                 <button onClick={() => handleClick("#reservations")} className="btn-primary mt-4">
-                  Reserve a Table
+                  Rezervišite Sto
                 </button>
               </motion.li>
             </motion.ul>

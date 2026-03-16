@@ -3,10 +3,10 @@ import chefPortrait from "@/assets/chef-portrait.jpg";
 import { Award, ChefHat, Heart, Users } from "lucide-react";
 
 const points = [
-  { icon: ChefHat, title: "Experienced Chefs", desc: "Over 20 years of culinary mastery" },
-  { icon: Award, title: "Premium Ingredients", desc: "Sourced from trusted local farms" },
-  { icon: Heart, title: "Cozy Atmosphere", desc: "Warmth in every corner" },
-  { icon: Users, title: "Outstanding Service", desc: "Dedicated, attentive, personal" },
+  { icon: ChefHat, title: "Iskusni Kuvari", desc: "Više od 20 godina kulinarske veštine" },
+  { icon: Award, title: "Premium Sastojci", desc: "Nabavljeni od pouzdanih lokalnih farmi" },
+  { icon: Heart, title: "Prijatna Atmosfera", desc: "Toplina u svakom kutku" },
+  { icon: Users, title: "Odličan Servis", desc: "Posvećen, pažljiv, lični" },
 ];
 
 const ChefSection = () => (
@@ -16,15 +16,15 @@ const ChefSection = () => (
         {/* Text */}
         <div className="order-2 lg:order-1">
           <ScrollReveal>
-            <span className="badge-label mb-4 block">Why Choose Us</span>
+            <span className="badge-label mb-4 block">Zašto Mi</span>
             <h2 className="text-4xl md:text-5xl font-light text-foreground mb-6 leading-tight">
-              Meet Chef Aleksandar Ilić
+              Upoznajte Kuvara Aleksandra Ilića
             </h2>
             <p className="body-text mb-10">
-              With two decades of experience in Michelin-starred kitchens across France and Italy,
-              Chef Aleksandar brings a philosophy of simplicity and respect for ingredients.
-              Every dish at Maison Ember is a reflection of his journey — rooted in tradition,
-              refined by innovation.
+              Sa dve decenije iskustva u Michelin-starred kuhinjama širom Francuske i Italije,
+              kuvar Aleksandar donosi filozofiju jednostavnosti i poštovanja prema sastojcima.
+              Svako jelo u Maison Ember-u odraz je njegovog putovanja — ukorenjeno u tradiciji,
+              uglađeno inovacijom.
             </p>
           </ScrollReveal>
 
@@ -46,7 +46,7 @@ const ChefSection = () => (
           <div className="overflow-hidden rounded-2xl">
             <img
               src={chefPortrait}
-              alt="Chef Aleksandar Ilić, head chef at Maison Ember"
+              alt="Kuvar Aleksandar Ilić, glavni kuvar u Maison Ember-u"
               className="w-full h-[400px] lg:h-[560px] object-cover image-frame"
               loading="lazy"
             />
