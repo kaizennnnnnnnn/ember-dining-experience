@@ -7,6 +7,7 @@ const links = [
   { label: "About", href: "#about" },
   { label: "Menu", href: "#menu" },
   { label: "Gallery", href: "#gallery" },
+  { label: "Private Dining", href: "#private-dining" },
   { label: "Reservations", href: "#reservations" },
   { label: "Contact", href: "#contact" },
 ];
