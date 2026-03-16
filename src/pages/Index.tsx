@@ -4,6 +4,7 @@ import AboutSection from "@/components/AboutSection";
 import FeaturedDishes from "@/components/FeaturedDishes";
 import MenuSection from "@/components/MenuSection";
 import GallerySection from "@/components/GallerySection";
+import PrivateDiningSection from "@/components/PrivateDiningSection";
 import ReservationSection from "@/components/ReservationSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import ChefSection from "@/components/ChefSection";
@@ -20,6 +21,7 @@ const Index = () => (
       <FeaturedDishes />
       <MenuSection />
       <GallerySection />
+      <PrivateDiningSection />
       <ChefSection />
       <TestimonialsSection />
       <ReservationSection />

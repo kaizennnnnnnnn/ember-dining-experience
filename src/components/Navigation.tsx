@@ -3,12 +3,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const links = [
+<<<<<<< HEAD
   { label: "Početna", href: "#hero" },
   { label: "O Nama", href: "#about" },
   { label: "Meni", href: "#menu" },
   { label: "Galerija", href: "#gallery" },
   { label: "Rezervacije", href: "#reservations" },
   { label: "Kontakt", href: "#contact" },
+=======
+  { label: "Home", href: "#hero" },
+  { label: "About", href: "#about" },
+  { label: "Menu", href: "#menu" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Private Dining", href: "#private-dining" },
+  { label: "Reservations", href: "#reservations" },
+  { label: "Contact", href: "#contact" },
+>>>>>>> 27eb34ca524da09d1914ea57e89a985d44ae0ccf
 ];
 
 const Navigation = () => {
